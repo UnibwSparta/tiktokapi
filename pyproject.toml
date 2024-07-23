@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sparta-tiktokapi"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Andreas Neumeier <andreas.neumeier@unibw.de>"]
 readme = "README.md"
