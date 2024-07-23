@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tiktokapi.models.model module &mdash; Sparta TikTok API</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tiktokapi.users" href="users.html" />
+    <link rel="prev" title="tiktokapi.models.constants module" href="models.constants.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            sparta.tiktokapi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">SPARTA TikTok API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="videos.html">tiktokapi.videos</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="models.html">tiktokapi.models</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="models.constants.html">tiktokapi.models.constants module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tiktokapi.models.model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject"><code class="docutils literal notranslate"><span class="pre">CommentObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.create_time"><code class="docutils literal notranslate"><span class="pre">CommentObject.create_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.id"><code class="docutils literal notranslate"><span class="pre">CommentObject.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.like_count"><code class="docutils literal notranslate"><span class="pre">CommentObject.like_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">CommentObject.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.model_config"><code class="docutils literal notranslate"><span class="pre">CommentObject.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.model_fields"><code class="docutils literal notranslate"><span class="pre">CommentObject.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.parent_comment_id"><code class="docutils literal notranslate"><span class="pre">CommentObject.parent_comment_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.reply_count"><code class="docutils literal notranslate"><span class="pre">CommentObject.reply_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.text"><code class="docutils literal notranslate"><span class="pre">CommentObject.text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject.video_id"><code class="docutils literal notranslate"><span class="pre">CommentObject.video_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error"><code class="docutils literal notranslate"><span class="pre">Error</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.code"><code class="docutils literal notranslate"><span class="pre">Error.code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.log_id"><code class="docutils literal notranslate"><span class="pre">Error.log_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.message"><code class="docutils literal notranslate"><span class="pre">Error.message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Error.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.model_config"><code class="docutils literal notranslate"><span class="pre">Error.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error.model_fields"><code class="docutils literal notranslate"><span class="pre">Error.model_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.cursor"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.has_more"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_config"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_fields"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.search_id"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.search_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.videos"><code class="docutils literal notranslate"><span class="pre">QueryVideoResponseData.videos</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.comments"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.comments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.cursor"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.has_more"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_config"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_fields"><code class="docutils literal notranslate"><span class="pre">ResearchVideoCommentsData.model_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse"><code class="docutils literal notranslate"><span class="pre">TiktokResponse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse.data"><code class="docutils literal notranslate"><span class="pre">TiktokResponse.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse.error"><code class="docutils literal notranslate"><span class="pre">TiktokResponse.error</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TiktokResponse.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse.model_config"><code class="docutils literal notranslate"><span class="pre">TiktokResponse.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.TiktokResponse.model_fields"><code class="docutils literal notranslate"><span class="pre">TiktokResponse.model_fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData"><code class="docutils literal notranslate"><span class="pre">UserFollowerData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.cursor"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.has_more"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.model_config"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.model_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData.user_followers"><code class="docutils literal notranslate"><span class="pre">UserFollowerData.user_followers</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.display_name"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_config"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.username"><code class="docutils literal notranslate"><span class="pre">UserFollowerInfoObject.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData"><code class="docutils literal notranslate"><span class="pre">UserFollowingData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.cursor"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.has_more"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.model_config"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.model_fields"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData.user_following"><code class="docutils literal notranslate"><span class="pre">UserFollowingData.user_following</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject"><code class="docutils literal notranslate"><span class="pre">UserInfoObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.avatar_url"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.avatar_url</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.bio_description"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.bio_description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.display_name"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.display_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.follower_count"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.follower_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.following_count"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.following_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.is_verified"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.is_verified</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.likes_count"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.likes_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.model_config"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.model_fields"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject.video_count"><code class="docutils literal notranslate"><span class="pre">UserInfoObject.video_count</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.cursor"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.has_more"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_config"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_fields"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.search_id"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.search_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData.user_liked_videos"><code class="docutils literal notranslate"><span class="pre">UserLikedVideosData.user_liked_videos</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData"><code class="docutils literal notranslate"><span class="pre">UserPinnedVideosData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserPinnedVideosData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_config"><code class="docutils literal notranslate"><span class="pre">UserPinnedVideosData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_fields"><code class="docutils literal notranslate"><span class="pre">UserPinnedVideosData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.pinned_videos_list"><code class="docutils literal notranslate"><span class="pre">UserPinnedVideosData.pinned_videos_list</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.cursor"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.cursor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.has_more"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.has_more</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_config"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_fields"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.search_id"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.search_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.user_reposted_videos"><code class="docutils literal notranslate"><span class="pre">UserRepostedVideosData.user_reposted_videos</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject"><code class="docutils literal notranslate"><span class="pre">VideoObject</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.comment_count"><code class="docutils literal notranslate"><span class="pre">VideoObject.comment_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.create_time"><code class="docutils literal notranslate"><span class="pre">VideoObject.create_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.effect_ids"><code class="docutils literal notranslate"><span class="pre">VideoObject.effect_ids</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.hashtag_names"><code class="docutils literal notranslate"><span class="pre">VideoObject.hashtag_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.id"><code class="docutils literal notranslate"><span class="pre">VideoObject.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.like_count"><code class="docutils literal notranslate"><span class="pre">VideoObject.like_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">VideoObject.model_computed_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.model_config"><code class="docutils literal notranslate"><span class="pre">VideoObject.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.model_fields"><code class="docutils literal notranslate"><span class="pre">VideoObject.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.music_id"><code class="docutils literal notranslate"><span class="pre">VideoObject.music_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.playlist_id"><code class="docutils literal notranslate"><span class="pre">VideoObject.playlist_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.region_code"><code class="docutils literal notranslate"><span class="pre">VideoObject.region_code</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.share_count"><code class="docutils literal notranslate"><span class="pre">VideoObject.share_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.username"><code class="docutils literal notranslate"><span class="pre">VideoObject.username</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.video_description"><code class="docutils literal notranslate"><span class="pre">VideoObject.video_description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.view_count"><code class="docutils literal notranslate"><span class="pre">VideoObject.view_count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject.voice_to_text"><code class="docutils literal notranslate"><span class="pre">VideoObject.voice_to_text</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">tiktokapi.users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access.html">tiktokapi.access module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sparta.tiktokapi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="models.html">tiktokapi.models</a></li>
+      <li class="breadcrumb-item active">tiktokapi.models.model module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/models.model.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-sparta.tiktokapi.models.model">
+<span id="tiktokapi-models-model-module"></span><h1>tiktokapi.models.model module<a class="headerlink" href="#module-sparta.tiktokapi.models.model" title="Link to this heading"></a></h1>
+<p>tiktok_models.py: Models for TikTok API responses.</p>
+<p>This module defines data models using Pydantic for various TikTok API responses, including video details, comments, user information, followers, and more.</p>
+<p class="rubric">Examples</p>
+<p>Define a video object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sparta.tiktokapi.models.model</span> <span class="kn">import</span> <span class="n">VideoObject</span>
+
+<span class="n">video</span> <span class="o">=</span> <span class="n">VideoObject</span><span class="p">(</span>
+    <span class="nb">id</span><span class="o">=</span><span class="mi">12345</span><span class="p">,</span>
+    <span class="n">create_time</span><span class="o">=</span><span class="mi">1617187200</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;example_user&quot;</span><span class="p">,</span>
+    <span class="n">region_code</span><span class="o">=</span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+    <span class="n">video_description</span><span class="o">=</span><span class="s2">&quot;This is an example video&quot;</span><span class="p">,</span>
+    <span class="n">comment_count</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">share_count</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">view_count</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">hashtag_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="s2">&quot;video&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">video</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Source: <a class="reference external" href="https://developers.tiktok.com/doc/research-api-codebook/">https://developers.tiktok.com/doc/research-api-codebook/</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">CommentObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_comment_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">like_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.create_time">
+<span class="sig-name descname"><span class="pre">create_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.create_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.like_count">
+<span class="sig-name descname"><span class="pre">like_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.like_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'create_time':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">unix</span> <span class="pre">timestamp</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">comment</span> <span class="pre">was</span> <span class="pre">created</span> <span class="pre">on'),</span> <span class="pre">'id':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">unique</span> <span class="pre">ID</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">comment'),</span> <span class="pre">'like_count':</span> <span class="pre">FieldInfo(annotation=Union[int,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">likes</span> <span class="pre">a</span> <span class="pre">comment</span> <span class="pre">has'),</span> <span class="pre">'parent_comment_id':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">ID</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">comment's</span> <span class="pre">parent</span> <span class="pre">comment,</span> <span class="pre">if</span> <span class="pre">any&quot;),</span> <span class="pre">'reply_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">replies</span> <span class="pre">a</span> <span class="pre">comment</span> <span class="pre">has'),</span> <span class="pre">'text':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">text</span> <span class="pre">within</span> <span class="pre">the</span> <span class="pre">comment'),</span> <span class="pre">'video_id':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">ID</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">or</span> <span class="pre">item</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">comment</span> <span class="pre">is</span> <span class="pre">under')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.parent_comment_id">
+<span class="sig-name descname"><span class="pre">parent_comment_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.parent_comment_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.reply_count">
+<span class="sig-name descname"><span class="pre">reply_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.reply_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.text">
+<span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.CommentObject.video_id">
+<span class="sig-name descname"><span class="pre">video_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.CommentObject.video_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">Error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.Error" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.code">
+<span class="sig-name descname"><span class="pre">code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.log_id">
+<span class="sig-name descname"><span class="pre">log_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.log_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.message" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.Error.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'code':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'log_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'message':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.Error.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">QueryVideoResponseData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">videos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Returns</span> <span class="pre">video</span> <span class="pre">results</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">given</span> <span class="pre">index.'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">videos</span> <span class="pre">or</span> <span class="pre">not.'),</span> <span class="pre">'search_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">search_id</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">unique</span> <span class="pre">identifier</span> <span class="pre">assigned</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">cached</span> <span class="pre">search</span> <span class="pre">result.\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">This</span> <span class="pre">identifier</span> <span class="pre">enables</span> <span class="pre">the</span> <span class="pre">resumption</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">prior</span> <span class="pre">search</span> <span class="pre">and</span> <span class="pre">retrieval</span> <span class="pre">of</span> <span class="pre">additional</span> <span class="pre">results</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">search</span> <span class="pre">criteria.'),</span> <span class="pre">'videos':</span> <span class="pre">FieldInfo(annotation=List[VideoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">video</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.search_id">
+<span class="sig-name descname"><span class="pre">search_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.search_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.QueryVideoResponseData.videos">
+<span class="sig-name descname"><span class="pre">videos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.QueryVideoResponseData.videos" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">ResearchVideoCommentsData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject" title="sparta.tiktokapi.models.model.CommentObject"><span class="pre">CommentObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.comments">
+<span class="sig-name descname"><span class="pre">comments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.CommentObject" title="sparta.tiktokapi.models.model.CommentObject"><span class="pre">CommentObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.comments" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'comments':</span> <span class="pre">FieldInfo(annotation=List[CommentObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">comment</span> <span class="pre">objects.'),</span> <span class="pre">'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">cursor</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">next</span> <span class="pre">page.'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">videos</span> <span class="pre">or</span> <span class="pre">not.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">TiktokResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData" title="sparta.tiktokapi.models.model.QueryVideoResponseData"><span class="pre">QueryVideoResponseData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData" title="sparta.tiktokapi.models.model.ResearchVideoCommentsData"><span class="pre">ResearchVideoCommentsData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject" title="sparta.tiktokapi.models.model.UserInfoObject"><span class="pre">UserInfoObject</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData" title="sparta.tiktokapi.models.model.UserLikedVideosData"><span class="pre">UserLikedVideosData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData" title="sparta.tiktokapi.models.model.UserPinnedVideosData"><span class="pre">UserPinnedVideosData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData" title="sparta.tiktokapi.models.model.UserFollowerData"><span class="pre">UserFollowerData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData" title="sparta.tiktokapi.models.model.UserFollowingData"><span class="pre">UserFollowingData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#sparta.tiktokapi.models.model.Error" title="sparta.tiktokapi.models.model.Error"><span class="pre">Error</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.QueryVideoResponseData" title="sparta.tiktokapi.models.model.QueryVideoResponseData"><span class="pre">QueryVideoResponseData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.ResearchVideoCommentsData" title="sparta.tiktokapi.models.model.ResearchVideoCommentsData"><span class="pre">ResearchVideoCommentsData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserInfoObject" title="sparta.tiktokapi.models.model.UserInfoObject"><span class="pre">UserInfoObject</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserLikedVideosData" title="sparta.tiktokapi.models.model.UserLikedVideosData"><span class="pre">UserLikedVideosData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserPinnedVideosData" title="sparta.tiktokapi.models.model.UserPinnedVideosData"><span class="pre">UserPinnedVideosData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerData" title="sparta.tiktokapi.models.model.UserFollowerData"><span class="pre">UserFollowerData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowingData" title="sparta.tiktokapi.models.model.UserFollowingData"><span class="pre">UserFollowingData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse.error">
+<span class="sig-name descname"><span class="pre">error</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#sparta.tiktokapi.models.model.Error" title="sparta.tiktokapi.models.model.Error"><span class="pre">Error</span></a></em><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse.error" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.TiktokResponse.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'data':</span> <span class="pre">FieldInfo(annotation=Union[QueryVideoResponseData,</span> <span class="pre">ResearchVideoCommentsData,</span> <span class="pre">UserInfoObject,</span> <span class="pre">UserLikedVideosData,</span> <span class="pre">UserPinnedVideosData,</span> <span class="pre">UserFollowerData,</span> <span class="pre">UserFollowingData,</span> <span class="pre">Dict],</span> <span class="pre">required=True),</span> <span class="pre">'error':</span> <span class="pre">FieldInfo(annotation=Error,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.TiktokResponse.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserFollowerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_followers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject" title="sparta.tiktokapi.models.model.UserFollowerInfoObject"><span class="pre">UserFollowerInfoObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Accounts</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">started</span> <span class="pre">following</span> <span class="pre">on</span> <span class="pre">or</span> <span class="pre">before</span> <span class="pre">this</span> <span class="pre">time</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">returned.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">Unix</span> <span class="pre">timestamp</span> <span class="pre">in</span> <span class="pre">UTC</span> <span class="pre">seconds.\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">Default</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">set</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">time</span> <span class="pre">this</span> <span class="pre">request</span> <span class="pre">was</span> <span class="pre">made.'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">accounts</span> <span class="pre">this</span> <span class="pre">user</span> <span class="pre">is</span> <span class="pre">following</span> <span class="pre">or</span> <span class="pre">not.'),</span> <span class="pre">'user_followers':</span> <span class="pre">FieldInfo(annotation=List[UserFollowerInfoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">user</span> <span class="pre">info</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerData.user_followers">
+<span class="sig-name descname"><span class="pre">user_followers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject" title="sparta.tiktokapi.models.model.UserFollowerInfoObject"><span class="pre">UserFollowerInfoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerData.user_followers" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserFollowerInfoObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.display_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'display_name':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">profile</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">follower</span> <span class="pre">of</span> <span class="pre">this</span> <span class="pre">user</span> <span class="pre">/</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">is</span> <span class="pre">following.'),</span> <span class="pre">'username':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">username</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">follower</span> <span class="pre">of</span> <span class="pre">this</span> <span class="pre">user</span> <span class="pre">/</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">is</span> <span class="pre">following.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowerInfoObject.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject.username" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserFollowingData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_following</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject" title="sparta.tiktokapi.models.model.UserFollowerInfoObject"><span class="pre">UserFollowerInfoObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Accounts</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">started</span> <span class="pre">following</span> <span class="pre">/</span> <span class="pre">Followers</span> <span class="pre">that</span> <span class="pre">followed</span> <span class="pre">this</span> <span class="pre">user</span> <span class="pre">on</span> <span class="pre">or</span> <span class="pre">before</span> <span class="pre">this</span> <span class="pre">time</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">returned.\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">It</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">Unix</span> <span class="pre">timestamp</span> <span class="pre">in</span> <span class="pre">UTC</span> <span class="pre">seconds.</span> <span class="pre">Default</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">set</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">time</span> <span class="pre">this</span> <span class="pre">request</span> <span class="pre">was</span> <span class="pre">made.'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">accounts</span> <span class="pre">this</span> <span class="pre">user</span> <span class="pre">is</span> <span class="pre">following</span> <span class="pre">/</span> <span class="pre">has</span> <span class="pre">more</span> <span class="pre">followers</span> <span class="pre">or</span> <span class="pre">not</span> <span class="pre">or</span> <span class="pre">not.'),</span> <span class="pre">'user_following':</span> <span class="pre">FieldInfo(annotation=List[UserFollowerInfoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">user</span> <span class="pre">info</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserFollowingData.user_following">
+<span class="sig-name descname"><span class="pre">user_following</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.UserFollowerInfoObject" title="sparta.tiktokapi.models.model.UserFollowerInfoObject"><span class="pre">UserFollowerInfoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserFollowingData.user_following" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserInfoObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bio_description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatar_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_verified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">following_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">follower_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">likes_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.avatar_url">
+<span class="sig-name descname"><span class="pre">avatar_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.avatar_url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.bio_description">
+<span class="sig-name descname"><span class="pre">bio_description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.bio_description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.display_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.follower_count">
+<span class="sig-name descname"><span class="pre">follower_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.follower_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.following_count">
+<span class="sig-name descname"><span class="pre">following_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.following_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.is_verified">
+<span class="sig-name descname"><span class="pre">is_verified</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.is_verified" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.likes_count">
+<span class="sig-name descname"><span class="pre">likes_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.likes_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'avatar_url':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">url</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">user's</span> <span class="pre">profile</span> <span class="pre">picture&quot;),</span> <span class="pre">'bio_description':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">user's</span> <span class="pre">bio</span> <span class="pre">description&quot;),</span> <span class="pre">'display_name':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">user's</span> <span class="pre">display</span> <span class="pre">name</span> <span class="pre">/</span> <span class="pre">nickname&quot;),</span> <span class="pre">'follower_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">followers</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">has'),</span> <span class="pre">'following_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">people</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">is</span> <span class="pre">following'),</span> <span class="pre">'is_verified':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">user's</span> <span class="pre">verified</span> <span class="pre">status.</span> <span class="pre">True</span> <span class="pre">if</span> <span class="pre">verified,</span> <span class="pre">false</span> <span class="pre">if</span> <span class="pre">not&quot;),</span> <span class="pre">'likes_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">total</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">likes</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">has</span> <span class="pre">accumulated'),</span> <span class="pre">'video_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">videos</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">has</span> <span class="pre">posted')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserInfoObject.video_count">
+<span class="sig-name descname"><span class="pre">video_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserInfoObject.video_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserLikedVideosData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_liked_videos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Retrieve</span> <span class="pre">liked</span> <span class="pre">videos</span> <span class="pre">starting</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">Unix</span> <span class="pre">timestamp</span> <span class="pre">in</span> <span class="pre">UTC</span> <span class="pre">seconds'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">videos</span> <span class="pre">or</span> <span class="pre">not.'),</span> <span class="pre">'search_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">search_id</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">unique</span> <span class="pre">identifier</span> <span class="pre">assigned</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">cached</span> <span class="pre">search</span> <span class="pre">result.\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">This</span> <span class="pre">identifier</span> <span class="pre">enables</span> <span class="pre">the</span> <span class="pre">resumption</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">prior</span> <span class="pre">search</span> <span class="pre">and</span> <span class="pre">retrieval</span> <span class="pre">of</span> <span class="pre">additional</span> <span class="pre">results</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">search</span> <span class="pre">criteria.'),</span> <span class="pre">'user_liked_videos':</span> <span class="pre">FieldInfo(annotation=List[VideoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">video</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.search_id">
+<span class="sig-name descname"><span class="pre">search_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.search_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserLikedVideosData.user_liked_videos">
+<span class="sig-name descname"><span class="pre">user_liked_videos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserLikedVideosData.user_liked_videos" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserPinnedVideosData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserPinnedVideosData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pinned_videos_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserPinnedVideosData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserPinnedVideosData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserPinnedVideosData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserPinnedVideosData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'pinned_videos_list':</span> <span class="pre">FieldInfo(annotation=List[VideoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">video</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserPinnedVideosData.pinned_videos_list">
+<span class="sig-name descname"><span class="pre">pinned_videos_list</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserPinnedVideosData.pinned_videos_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">UserRepostedVideosData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_reposted_videos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_more</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.cursor">
+<span class="sig-name descname"><span class="pre">cursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.cursor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.has_more">
+<span class="sig-name descname"><span class="pre">has_more</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.has_more" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'cursor':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Retrieve</span> <span class="pre">liked</span> <span class="pre">videos</span> <span class="pre">starting</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">specified</span> <span class="pre">Unix</span> <span class="pre">timestamp</span> <span class="pre">in</span> <span class="pre">UTC</span> <span class="pre">seconds'),</span> <span class="pre">'has_more':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=True,</span> <span class="pre">description='Whether</span> <span class="pre">there</span> <span class="pre">are</span> <span class="pre">more</span> <span class="pre">videos</span> <span class="pre">or</span> <span class="pre">not.'),</span> <span class="pre">'search_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">search_id</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">unique</span> <span class="pre">identifier</span> <span class="pre">assigned</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">cached</span> <span class="pre">search</span> <span class="pre">result.\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">This</span> <span class="pre">identifier</span> <span class="pre">enables</span> <span class="pre">the</span> <span class="pre">resumption</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">prior</span> <span class="pre">search</span> <span class="pre">and</span> <span class="pre">retrieval</span> <span class="pre">of</span> <span class="pre">additional</span> <span class="pre">results</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">search</span> <span class="pre">criteria.'),</span> <span class="pre">'user_reposted_videos':</span> <span class="pre">FieldInfo(annotation=List[VideoObject],</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">video</span> <span class="pre">objects</span> <span class="pre">that</span> <span class="pre">match</span> <span class="pre">the</span> <span class="pre">query.')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.search_id">
+<span class="sig-name descname"><span class="pre">search_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.search_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.UserRepostedVideosData.user_reposted_videos">
+<span class="sig-name descname"><span class="pre">user_reposted_videos</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#sparta.tiktokapi.models.model.VideoObject" title="sparta.tiktokapi.models.model.VideoObject"><span class="pre">VideoObject</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.UserRepostedVideosData.user_reposted_videos" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparta.tiktokapi.models.model.</span></span><span class="sig-name descname"><span class="pre">VideoObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">music_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">like_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">share_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">effect_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashtag_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playlist_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voice_to_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.comment_count">
+<span class="sig-name descname"><span class="pre">comment_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.comment_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.create_time">
+<span class="sig-name descname"><span class="pre">create_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.create_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.effect_ids">
+<span class="sig-name descname"><span class="pre">effect_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.effect_ids" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.hashtag_names">
+<span class="sig-name descname"><span class="pre">hashtag_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.hashtag_names" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.like_count">
+<span class="sig-name descname"><span class="pre">like_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.like_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.model_computed_fields" title="Link to this definition"></a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'from_attributes':</span> <span class="pre">True}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.model_config" title="Link to this definition"></a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'comment_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">comments</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">has</span> <span class="pre">received'),</span> <span class="pre">'create_time':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='UTC</span> <span class="pre">Unix</span> <span class="pre">epoch</span> <span class="pre">(in</span> <span class="pre">seconds)</span> <span class="pre">of</span> <span class="pre">when</span> <span class="pre">the</span> <span class="pre">TikTok</span> <span class="pre">video</span> <span class="pre">was</span> <span class="pre">posted.</span> <span class="pre">(Inherited</span> <span class="pre">field</span> <span class="pre">from</span> <span class="pre">TNS</span> <span class="pre">research</span> <span class="pre">API)'),</span> <span class="pre">'effect_ids':</span> <span class="pre">FieldInfo(annotation=Union[List[str],</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='The</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">effect</span> <span class="pre">ids</span> <span class="pre">applied</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">video'),</span> <span class="pre">'hashtag_names':</span> <span class="pre">FieldInfo(annotation=List[str],</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">hashtag</span> <span class="pre">names</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">participates</span> <span class="pre">in'),</span> <span class="pre">'id':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='Unique</span> <span class="pre">identifier</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">TikTok</span> <span class="pre">video.</span> <span class="pre">Also</span> <span class="pre">called</span> <span class="pre">&quot;item_id&quot;</span> <span class="pre">or</span> <span class="pre">&quot;video_id&quot;'),</span> <span class="pre">'like_count':</span> <span class="pre">FieldInfo(annotation=Union[int,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">likes</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">has</span> <span class="pre">received'),</span> <span class="pre">'music_id':</span> <span class="pre">FieldInfo(annotation=Union[int,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='The</span> <span class="pre">music_id</span> <span class="pre">used</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">video'),</span> <span class="pre">'playlist_id':</span> <span class="pre">FieldInfo(annotation=Union[int,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='The</span> <span class="pre">ID</span> <span class="pre">of</span> <span class="pre">playlist</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">belongs</span> <span class="pre">to'),</span> <span class="pre">'region_code':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='A</span> <span class="pre">two</span> <span class="pre">digit</span> <span class="pre">code</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">country</span> <span class="pre">where</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">creator</span> <span class="pre">registered</span> <span class="pre">their</span> <span class="pre">account'),</span> <span class="pre">'share_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">shares</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">has</span> <span class="pre">received'),</span> <span class="pre">'username':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description=&quot;The</span> <span class="pre">video's</span> <span class="pre">author's</span> <span class="pre">username&quot;),</span> <span class="pre">'video_description':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">description</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">video,</span> <span class="pre">also</span> <span class="pre">known</span> <span class="pre">as</span> <span class="pre">the</span> <span class="pre">title'),</span> <span class="pre">'view_count':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True,</span> <span class="pre">description='The</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">video</span> <span class="pre">views</span> <span class="pre">the</span> <span class="pre">video</span> <span class="pre">has</span> <span class="pre">received'),</span> <span class="pre">'voice_to_text':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">description='Voice</span> <span class="pre">to</span> <span class="pre">text</span> <span class="pre">and</span> <span class="pre">subtitles</span> <span class="pre">(for</span> <span class="pre">videos</span> <span class="pre">that</span> <span class="pre">have</span> <span class="pre">voice</span> <span class="pre">to</span> <span class="pre">text</span> <span class="pre">features</span> <span class="pre">on,</span> <span class="pre">show</span> <span class="pre">the</span> <span class="pre">texts</span> <span class="pre">already</span> <span class="pre">generated)')}</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.model_fields" title="Link to this definition"></a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.music_id">
+<span class="sig-name descname"><span class="pre">music_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.music_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.playlist_id">
+<span class="sig-name descname"><span class="pre">playlist_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.playlist_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.region_code">
+<span class="sig-name descname"><span class="pre">region_code</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.region_code" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.share_count">
+<span class="sig-name descname"><span class="pre">share_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.share_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.username">
+<span class="sig-name descname"><span class="pre">username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.username" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.video_description">
+<span class="sig-name descname"><span class="pre">video_description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.video_description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.view_count">
+<span class="sig-name descname"><span class="pre">view_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.view_count" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sparta.tiktokapi.models.model.VideoObject.voice_to_text">
+<span class="sig-name descname"><span class="pre">voice_to_text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sparta.tiktokapi.models.model.VideoObject.voice_to_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="models.constants.html" class="btn btn-neutral float-left" title="tiktokapi.models.constants module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="users.html" class="btn btn-neutral float-right" title="tiktokapi.users" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Neumeier, Riedl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
