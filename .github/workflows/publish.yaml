@@ -1,0 +1,45 @@
+name: Publish Python distributions to PyPI and TestPyPI
+on:
+  release:
+    types: [published]
+jobs:
+  build-n-publish:
+    name: Build and publish Python distributions to PyPI and TestPyPI
+    runs-on: ubuntu-latest
+    steps:
+      #----------------------------------------------
+      #       check-out repo and set-up python
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      #----------------------------------------------
+      #  -----  install & configure poetry  -----
+      #----------------------------------------------
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: false
+          virtualenvs-in-project: false
+          installer-parallel: true
+      #----------------------------------------------
+      #       Building distributions
+      #----------------------------------------------
+      - name: Build a binary wheel and a source tarball
+        run: |
+          poetry build
+      #----------------------------------------------
+      #       Publishing the distribution to PyPI and TestPyPI
+      #----------------------------------------------
+      - name: Publish distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository-url: https://test.pypi.org/legacy/
+      - name: Publish distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}

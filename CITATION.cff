@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Neumeier"
+  given-names: "Andreas"
+- family-names: "Riedl"
+  given-names: "Jasmin"
+  orcid: "https://orcid.org/0000-0002-4888-7689"
+title: "sparta-tiktokapi"
+version: 0.1.0
+date-released: 2024-07-22
+url: "https://github.com/UnibwSparta/tiktokapi"
